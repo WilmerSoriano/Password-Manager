@@ -1,0 +1,45 @@
+Password-Manager/
+│── CMakeLists.txt          # or PasswordManager.pro if you use qmake
+│── README.md               # project overview, screenshots, how to run
+│── LICENSE                 # GNU GPLv3 (or other license)
+│── .gitignore              # ignore build files, creds, etc.
+│
+├── include/                # C++ headers
+│   ├── EncryptionManager.h
+│   ├── DatabaseManager.h
+│   ├── PasswordEntry.h
+│   ├── User.h
+│   └── VaultManager.h
+│
+├── src/                    # C++ source files
+│   ├── main.cpp
+│   ├── EncryptionManager.cpp
+│   ├── DatabaseManager.cpp
+│   ├── PasswordEntry.cpp
+│   ├── User.cpp
+│   └── VaultManager.cpp
+│
+├── gui/                    # Qt GUI
+│   ├── MainWindow.ui       # Qt Designer UI file
+│   ├── MainWindow.h
+│   ├── MainWindow.cpp
+│   └── resources.qrc       # icons/images for UI
+│
+├── db/                     # Database schema + scripts
+│   ├── schema.sql          # CREATE TABLE statements
+│   └── seed.sql            # (optional) test/demo data
+│
+├── tests/                  # Unit tests
+│   ├── test_encryption.cpp
+│   ├── test_database.cpp
+│   └── test_vault.cpp
+│
+├── scripts/                # Optional helpers
+│   ├── export_csv.py       # export vault to CSV (optional)
+│   ├── import_csv.py       # import vault from CSV
+│   └── backup.sh           # bash script to backup DB
+│
+└── docs/                   # Documentation
+    ├── design.md           # OOP design, UML, security notes
+    ├── screenshots/        # app screenshots for README
+    └── roadmap.md          # future improvements
