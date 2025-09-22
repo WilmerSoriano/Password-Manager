@@ -39,7 +39,7 @@ jobs:
 
     - name: Build
       run: |
-        if [ ${{ runner.os }} == 'Windows' ]; then
+        if [ "${{ runner.os }}" == "Windows" ]; then
           cmake --build build --config Release -- /m
         else
           cmake --build build --config Release -- -j$(nproc)
@@ -47,5 +47,5 @@ jobs:
 
 
     - name: Run tests
-      if: runner.os == 'Linux' # GUI tests on Windows are tricky in CI
+      if: runner.os == 'Linux' # NOTE: for future refrence, GUI tests on Windows are tricky in CI
       run: ctest --test-dir build --output-on-failure
