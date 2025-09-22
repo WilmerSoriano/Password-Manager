@@ -29,7 +29,6 @@ jobs:
       if: runner.os == 'Windows'
       run: |
         choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' --no-progress
-        choco install -y mingw --no-progress
         choco install -y openssl --no-progress
         # Qt on Windows: requires prebuilt package or vcpkg (heavier setup).
         # For now we only guarantee core C++ build, you can extend to full Qt later.
@@ -38,14 +37,7 @@ jobs:
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
-      run: |
-        if ($env:RUNNER_OS -eq "Windows") {
-            cmake --build build --config Release -- /m
-        } else {
-            cmake --build build --config Release -- -j$env:NUMBER_OF_PROCESSORS
-        }
-
-
+      run: cmake --build build --config Release --parallel
 
     - name: Run tests
       if: runner.os == 'Linux' # NOTE: for future refrence, GUI tests on Windows are tricky in CI
