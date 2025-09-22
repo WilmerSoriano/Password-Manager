@@ -38,7 +38,13 @@ jobs:
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
-      run: cmake --build build --config Release -- -j${{ env.NUM_PROCESSORS }}
+      run: |
+        if [ ${{ runner.os }} == 'Windows' ]; then
+          cmake --build build --config Release -- /m
+        else
+          cmake --build build --config Release -- -j$(nproc)
+        fi
+
 
     - name: Run tests
       if: runner.os == 'Linux' # GUI tests on Windows are tricky in CI
