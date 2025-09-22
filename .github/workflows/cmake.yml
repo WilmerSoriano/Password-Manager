@@ -39,11 +39,12 @@ jobs:
 
     - name: Build
       run: |
-        if [ "${{ runner.os }}" == "Windows" ]; then
-          cmake --build build --config Release -- /m
-        else
-          cmake --build build --config Release -- -j$(nproc)
-        fi
+        if ($env:RUNNER_OS -eq "Windows") {
+            cmake --build build --config Release -- /m
+        } else {
+            cmake --build build --config Release -- -j$env:NUMBER_OF_PROCESSORS
+        }
+
 
 
     - name: Run tests
