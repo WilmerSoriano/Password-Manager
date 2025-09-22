@@ -27,17 +27,13 @@ Password-Manager/
 │
 ├── db/                     # Database schema + scripts
 │   ├── schema.sql          # CREATE TABLE statements
-│   └── seed.sql            # (optional) test/demo data
+│   └── seed.sql        
 │
 ├── tests/                  # Unit tests
 │   ├── test_encryption.cpp
 │   ├── test_database.cpp
 │   └── test_vault.cpp
 │
-├── scripts/                # Optional helpers
-│   ├── export_csv.py       # export vault to CSV (optional)
-│   ├── import_csv.py       # import vault from CSV
-│   └── backup.sh           # bash script to backup DB
 │
 └── docs/                   # Documentation
     ├── design.md           # OOP design, UML, security notes
