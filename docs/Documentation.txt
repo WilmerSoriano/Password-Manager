@@ -11,53 +11,56 @@ Requirements:
     * Backup and restore password database
 
 Design:
-    Language: C++ version 17
-    Library: OpenSSL version 3.0.13 
-    Compiler: GCC version 13.3.0
-    Builder: CMake version 3.28.3
+    Language: C++ version 17 (https://en.cppreference.com/w/cpp/17)
+    Library: OpenSSL version 3.0.13 (https://docs.openssl.org/3.0/man3/#copyright)
+    Compiler: GCC version 13.3.0 (https://gcc.gnu.org/onlinedocs/gcc-13.3.0/gcc/)
+    Builder: CMake version 3.28.3 (https://cmake.org/cmake/help/v3.28/index.html)
     GUI Framework: Qt GUI version 6.9.3 (https://doc.qt.io/qt-6/qtgui-index.html)
-    Database: MySQL  Ver 15.1 Distrib 10.4.32-MariaDB
+    Database: MySQL version 15.1 Distrib 10.4.32-MariaDB (https://dev.mysql.com/doc/refman/8.4/en/sql-data-definition-statements.html)
 
-Project Layout: OOP design
+    Project Layout: OOP design
 
-Password-Manager/
-│── CMakeLists.txt          
-│── README.md               # project overview, screenshots, how to run
-│── LICENSE                 # GNU GPLv3
-│── .gitignore              # ignore build files
-│
-├── include/                # C++ headers
-│   ├── EncryptionManager.h
-│   ├── DatabaseManager.h
-│   ├── PasswordEntry.h
-│   ├── User.h
-│   └── VaultManager.h
-│
-├── src/                    # C++ source files
-│   ├── main.cpp
-│   ├── EncryptionManager.cpp
-│   ├── DatabaseManager.cpp
-│   ├── PasswordEntry.cpp
-│   ├── User.cpp
-│   └── VaultManager.cpp
-│
-├── gui/                    # Qt GUI
-│   ├── MainWindow.ui       
-│   ├── MainWindow.h
-│   ├── MainWindow.cpp
-│   └── resources           # icons/images for UI
-│
-├── db/                     # Database schema +
-│   ├── schema.sql          # CREATE TABLE statements
-│   └── seed.sql        
-│
-├── tests/                  # Unit tests
-│   ├── test_encryption.cpp
-│   ├── test_database.cpp
-│   └── test_vault.cpp
-│
-│
-└── docs/                   # Documentation
-    ├── design              # UML, security notes
-    ├── screenshots        
-    └── Documentation         
+    Password-Manager/
+    │── CMakeLists.txt          
+    │── README.md               # project overview, screenshots, how to run
+    │── LICENSE                 # GNU GPLv3
+    │── .gitignore              # ignore build files
+    │
+    ├── include/                # C++ headers
+    │   ├── EncryptionManager.h
+    │   ├── DatabaseManager.h
+    │   ├── PasswordEntry.h
+    │   ├── User.h
+    │   └── VaultManager.h
+    │
+    ├── src/                    # C++ source files
+    │   ├── main.cpp
+    │   ├── EncryptionManager.cpp
+    │   ├── DatabaseManager.cpp
+    │   ├── PasswordEntry.cpp
+    │   ├── User.cpp
+    │   └── VaultManager.cpp
+    │
+    ├── gui/                    # Qt GUI
+    │   ├── MainWindow.ui       
+    │   ├── MainWindow.h
+    │   ├── MainWindow.cpp
+    │   └── resources           # icons/images for UI
+    │
+    ├── db/                     # Database schema +
+    │   ├── schema.sql          # CREATE TABLE statements
+    │   └── seed.sql        
+    │
+    ├── tests/                  # Unit tests
+    │   ├── test_encryption.cpp
+    │   ├── test_database.cpp
+    │   └── test_vault.cpp
+    │
+    │
+    └── docs/                   # Documentation
+        ├── design              # UML, security notes
+        ├── screenshots        
+        └── Documentation         
+
+Note:
+    
