@@ -65,4 +65,12 @@ Design:
         └── Documentation         
 
 Note:
+    9/21/2025 - Initial project idea created with Agile planning. Started to outline requirements, design, 
+                and setting up automation build checking. Other small files created to hold future documentation.
 
+    9/25/2025 - Started working on the UML diagrams and updating Design diagram along the way.
+
+    10/03/2025 - UML diagrams completed and added to docs/Documentation. Updated the documentation with design notes.
+                 Added version numbers to libraries and tools used. Although late, started to documentaing more in detail here.
+                 For future reference, documentation should be updated as changes are made to the project. Only small minor changes will
+                 not be documented here. (e.g typo fixes, and small refrences that do not change the project dramtically)
