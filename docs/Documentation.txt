@@ -1,4 +1,6 @@
-Project: Password Manager Application
+
+Project: 
+    Password Manager Application
 
 Requirements:
     * Securely store and manage user passwords
@@ -63,4 +65,4 @@ Design:
         └── Documentation         
 
 Note:
-    
+
