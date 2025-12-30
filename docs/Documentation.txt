@@ -44,7 +44,7 @@ Design:
     │   └── VaultManager.cpp
     │
     ├── gui/                    # Qt GUI
-    │   ├── MainWindow.ui       
+    │   ├── MainWindow.ui       # the XML file for Qt Application (optional, I might delete since I will be writing the GUI fully coded, no outside GUI needed.)
     │   ├── MainWindow.h
     │   ├── MainWindow.cpp
     │   └── resources           # icons/images for UI
@@ -74,3 +74,9 @@ Note:
                  Added version numbers to libraries and tools used. Although late, started to documentaing more in detail here.
                  For future reference, documentation should be updated as changes are made to the project. Only small minor changes will
                  not be documented here. (e.g typo fixes, and small refrences that do not change the project dramtically)
+
+    12/29/205 - Came back after exam weeks/graduation/holiday break.
+                Now starting the project by reading doc for cmake and Qt-gui. Needed to make cmake in order to run Qt-gui. started with cmake,
+                more to be learned and added as I work on the project, but seems simpler then done. Qt-gui got more complicated as went through it.
+                Added a basic push button and header file, Needed to add Q_OBJECT, and update cmake with AUTOMOC in order to work. I do see 1 bug,
+                not severe, but will figure out soon. For now, more studying on all component will be done especially for Qt and some cmake implementation. 
