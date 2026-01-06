@@ -25,10 +25,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y \
         cmake g++ \
-        qt6-base-dev \
-        qt6-sql-dev \ 
-        libssl-dev \
-        libmysqlclient-dev
+        qt6-base-dev qt6-base-dev-tools \
+        libqt6sql6-mysql libmysqlclient-dev \ 
+        libssl-dev
 
     - name: Set up dependencies (Windows)
       if: runner.os == 'Windows'
@@ -42,7 +41,6 @@ jobs:
       with:
         version: 6.6.1
         arch: win64_msvc2019_64
-        modules: qtbase, qtsql
 
     - name: Configure CMake
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
