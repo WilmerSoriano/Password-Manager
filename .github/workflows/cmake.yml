@@ -23,15 +23,26 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake g++ qtbase5-dev libqt5sql5-mysql libssl-dev
+        sudo apt-get install -y \
+        cmake g++ \
+        qt6-base-dev \
+        qt6-sql-dev \ 
+        libssl-dev \
+        libmysqlclient-dev
 
     - name: Set up dependencies (Windows)
       if: runner.os == 'Windows'
       run: |
         choco install -y cmake --installargs 'ADD_CMAKE_TO_PATH=System' --no-progress
         choco install -y openssl --no-progress
-        # Qt on Windows: requires prebuilt package or vcpkg (heavier setup).
-        # For now we only guarantee core C++ build, you can extend to full Qt later.
+    
+    - name: Install Qt6
+      if: runner.os == 'Windows'
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: 6.6.1
+        arch: win64_msvc2019_64
+        modules: qtbase, qtsql
 
     - name: Configure CMake
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
