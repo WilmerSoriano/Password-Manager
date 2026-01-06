@@ -26,9 +26,9 @@ jobs:
         sudo apt-get install -y \
         cmake g++ \
         qt6-base-dev qt6-base-dev-tools \
-        libqt6sql6-mysql libmysqlclient-dev \ 
+        libqt6sql6-mysql libmysqlclient-dev \
         libssl-dev
-
+        
     - name: Set up dependencies (Windows)
       if: runner.os == 'Windows'
       run: |
