@@ -6,5 +6,5 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
 
     QPushButton *Enter_button = new QPushButton("Enter", this);
     Enter_button->setFixedSize(150,35);
-    Enter_button->set
+    //Enter_button->set
 }
