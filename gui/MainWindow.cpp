@@ -2,5 +2,9 @@
 #include <QPushButton>
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
-    QPushButton *button = new QPushButton("This works!", this);
+    //centralWidget(parent);
+
+    QPushButton *Enter_button = new QPushButton("Enter", this);
+    Enter_button->setFixedSize(150,35);
+    Enter_button->set
 }
