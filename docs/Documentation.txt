@@ -75,8 +75,14 @@ Note:
                  For future reference, documentation should be updated as changes are made to the project. Only small minor changes will
                  not be documented here. (e.g typo fixes, and small refrences that do not change the project dramtically)
 
-    12/29/205 - Came back after exam weeks/graduation/holiday break.
+    12/29/2025 - Came back after exam weeks/graduation/holiday break.
                 Now starting the project by reading doc for cmake and Qt-gui. Needed to make cmake in order to run Qt-gui. started with cmake,
                 more to be learned and added as I work on the project, but seems simpler then done. Qt-gui got more complicated as went through it.
                 Added a basic push button and header file, Needed to add Q_OBJECT, and update cmake with AUTOMOC in order to work. I do see 1 bug,
-                not severe, but will figure out soon. For now, more studying on all component will be done especially for Qt and some cmake implementation. 
+                not severe, but will figure out soon. For now, more studying on all component will be done especially for Qt and some cmake implementation.
+
+    1/7/2026 - NOTE: I did work on it previously in other day (not recorded) to play around with Qt Widgets.
+                Today objective was to make working with Qt simpler. While reading Doc was affective, it was not
+                efficient in coding time. After researching, the .vscode folder was more important then I realized since I wanted to work with
+                intellisec, it's how VS code predict next line of. However, in this case I wanted vs code to show me all availble method for this class
+                (e.g button class) After configuring correctly on VS and updating .vscode file it now works. (I still don't I need it, but will keep it for now) 
