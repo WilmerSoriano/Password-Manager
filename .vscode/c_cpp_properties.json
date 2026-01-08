@@ -1,0 +1,23 @@
+// This file is actually important for searching method and Function on Qt Faster.
+// After configruing correctly intellisec is now availbe on my device and should be
+// available to other as well. Easier to use Qt functions.
+
+{
+  "configurations": [
+    {
+      "name": "WSL",
+      "includePath": [
+        "/usr/include/x86_64-linux-gnu/qt6",
+        "/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
+        "/usr/include/x86_64-linux-gnu/qt6/QtCore",
+        "/usr/include/x86_64-linux-gnu/qt6/QtGui",
+        "${workspaceFolder}/**"
+      ],
+      "compilerPath": "/usr/bin/g++",
+      "intelliSenseMode": "linux-gcc-x64",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}
+
